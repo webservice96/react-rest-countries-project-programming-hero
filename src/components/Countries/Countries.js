@@ -10,10 +10,10 @@ const Countries = () => {
     }, []);
     return (
         <div className="container my-4">
-            <h3 className="mb-3">All Countries</h3>
+            <h2 className="mb-3">All Countries {countries.length}</h2>
             <div className="row">
                 {
-                    countries.map(country => <Country country={country}></Country>)
+                    countries.map(country => <Country key={country.capital} country={country}></Country>)
                 }
             </div>
         </div>
